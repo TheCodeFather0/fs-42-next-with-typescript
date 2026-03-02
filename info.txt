@@ -1,0 +1,14 @@
+typescript
+
+type-lar 2 yere bolunur
+1. implicit 
+2. explicit
+
+
+type, interface 
+
+================================================
+
+1 deyisene eyni anda nece 1 nece type menimsetmek olar?
+
+| => union operatoru
