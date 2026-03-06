@@ -1,42 +1,13 @@
-import { IUser } from "@/types/home-page-types";
-
-const App = () => {
-  const users: IUser[] = [
-    {
-      age: 12,
-      name: "ramin",
-      surname: "mammadzada",
-      langs: ["html", "css"],
-      getFullName() {
-        return this.name + " " + this.surname;
-      },
-    },
-    {
-      age: 15,
-      name: "leyla",
-      surname: "aliyeva",
-      getFullName() {
-        return this.name + " " + this.surname;
-      },
-    },
-  ];
-
-  type TFunc = (name: string, age: number) => string | number;
-
-  const handleClick: TFunc = (name, age) => {
-    return name + " " + age;
-  };
-
-  handleClick("ramin", 12);
+export default function HomePage() {
   return (
-    <div>
-      <h1>Hello world!</h1>
+    <main className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold mb-4">Next.js layihəmə xoş gəldin</h1>
 
-      {users.map((item: IUser) => {
-        return <div key={item.name}>{item.getFullName()}</div>;
-      })}
-    </div>
+      <p className="text-gray-600 mb-6">Bu ana səhifə komponentidir.</p>
+
+      <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Başla
+      </button>
+    </main>
   );
-};
-
-export default App;
+}
